@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+
+<body>
+
+    <h1 style="color: rgba(255, 255, 255, 0.757);font-weight: 900;font-size: 45px;">Quiz - App</h1>
+    <div class="Welcome">
+        <h1>Welcome to Quizie</h1>
+        <h4>Are you ready to test your knowledge?</h4>
+        <button class="start Hover" onclick="Start()">Start</button>
+    </div>
+    <div class="Types">
+        <h1>Please choose a category</h1>
+        <h2> which you want to play!</h2>
+        <div class="Category Hover">Anime</div>
+        <div class="Category Hover">Sports</div>
+        <div class="Category Hover">Geography</div>
+    </div>
+    <div class="main-content">
+        <div class="question">Q1.What is your name?</div>
+        <div class="option"></div>
+        <h3 class="answerText">oh yeah!</h3>
+        <div class="Controls">
+            <div class="score effect">score: 0</div>
+            <button class="next effect"">Next</button>
+            </div>
+        </div>
+      
+        <div class=" result">
+                <h1>Result</h1>
+                <div class="content">
+                    <h2 class="Text">You are amazing!</h2>
+                    <div class="Total" style="font-size: 27px;">Total Score:0</div>
+                </div>
+                <button class="restart Hover">Restart</button>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
