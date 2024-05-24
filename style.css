@@ -37,11 +37,11 @@ body{
     color:black;
 }
 .Welcome button{
-    padding: 10px 80px;
+    padding: 5px 80px;
     border:none;
     border-radius: 30px;
     background-color: var(--clr--colr);
-    font-size: 18px;
+    font-size: 24px;
     color:white;
     font-weight: 700;
 }
@@ -139,8 +139,8 @@ body{
     transition: 1s ease;
 }
 .main-content h3{
-    color:rgba(0, 0, 0, 0.46);
-    font-size: 25px;
+    color:teal;
+    font-size: 20px;
     transition: 0.5s ease;
     display: none;
 }
@@ -159,7 +159,7 @@ body{
     text-align: center;
     font-size: 22px;
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.324);
+    color: black;
     display: none;
 }
 .result button{
@@ -195,4 +195,9 @@ body{
 .Hover:active{
     transform: scale(0.80);
     transition: 0.3s ease;
+}
+@media only screen and (max-width:600){
+    .Welcome{
+        transform: scale(0.7);
+    }
 }
