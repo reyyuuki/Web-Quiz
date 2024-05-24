@@ -196,8 +196,25 @@ body{
     transform: scale(0.80);
     transition: 0.3s ease;
 }
-@media only screen and (max-width:600){
-    .Welcome{
-        transform: scale(0.7);
-    }
+@media only screen and (max-width:600px){
+  .Welcome{
+    width:80%;
+  }
+  .Types{
+    width:80%;
+  }
+  .main-content{
+    width:80%;
+    transform:scale(0.8);
+  }
+  .Answer{
+    width:80%;
+    font-size:18px;
+  }
+  .question{
+    font-size: 22px;
+  }
+  .result{
+    width:80%;
+  }
 }
