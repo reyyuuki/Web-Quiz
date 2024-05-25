@@ -116,7 +116,6 @@ function Start() {
             Main.style.display = "flex";
             CategoryIndex = i;
             fillElmt();
-            
         });
     }
 }
@@ -127,8 +126,9 @@ function fillElmt() {
         Option.children[j].textContent = QuizList[CategoryIndex].QuestionList[index].options[j];
     }
 }
-fillElmt();
+
 function QuizGame() {
+    fillElmt();
     for (let i = 0; i < Option.children.length; i++) {
         Option.children[i].addEventListener('click', () => {
             if (!isrunning) {
