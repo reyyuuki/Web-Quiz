@@ -111,30 +111,30 @@ function Start() {
     Welcome.style.display = "none";
     for (let i = 0; i < Category.length; i++) {
         Category[i].innerHTML = QuizList[i].CategoryName;
+        Category[i].addEventListener('click', () => {
+            Types.style.display = "none";
+            Main.style.display = "flex";
+            CategoryIndex = i;
+            fillElmt();
+            
+        });
     }
 }
-for (let i = 0; i < Category.length; i++) {
-    Category[i].addEventListener('click', () => {
-        Types.style.display = "none";
-        Main.style.display = "flex";
-        CategoryIndex = i;
-    });
-}
+
 function fillElmt() {
     QuestionElmt.textContent = QuizList[CategoryIndex].QuestionList[index].question;
     for (let j = 0; j < Option.children.length; j++) {
         Option.children[j].textContent = QuizList[CategoryIndex].QuestionList[index].options[j];
     }
 }
-
+fillElmt();
 function QuizGame() {
-    fillElmt();
     for (let i = 0; i < Option.children.length; i++) {
         Option.children[i].addEventListener('click', () => {
             if (!isrunning) {
                 Option.children[i].style.backgroundColor = "teal";
                 setTimeout(() => {
-                    if (Option.children[i].textContent === QuizList[i].QuestionList[index].answer) {
+                    if (Option.children[i].textContent === QuizList[CategoryIndex].QuestionList[index].answer) {
                         Option.children[i].style.backgroundColor = "green";
                         score += 25;
                         ScoreElmt.textContent = `Score: ${score}`;
@@ -156,6 +156,9 @@ function QuizGame() {
             }
         });
     }
+
+
+
     Nextbtn.addEventListener("click", () => {
         index++;
         if (isrunning) {
