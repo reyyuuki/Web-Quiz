@@ -12,6 +12,7 @@ const Total = document.getElementsByClassName("Total")[0];
 const Resetbtn = document.getElementsByClassName("restart")[0];
 const Welcome = document.getElementsByClassName("Welcome")[0];
 const answerText = document.getElementsByClassName("answerText")[0];
+const audio = document.getElementById("Audio");
 
 let index = 0;
 let CategoryIndex = 0;
@@ -141,12 +142,16 @@ function QuizGame() {
                         answerText.style.display = "block";
                         answerText.textContent = "Oh yeah, its Correct! Congratulations";
                         answerText.style.color = "green";
+                        audio.src = "Correct.mp3";
+                        audio.play();
                     }
                     else {
                         Option.children[i].style.backgroundColor = "black";
                         answerText.style.display = "block";
                         answerText.textContent = "No, it is Wrong Answer! Try harder";
                         answerText.style.color = "red";
+                        audio.src = "Wrong.mp3";
+                        audio.play();
                     }
                 }, 500);
                 isrunning = true;
